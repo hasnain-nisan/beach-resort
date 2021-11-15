@@ -1,10 +1,10 @@
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
+import Navbar from "./components/Navbar"
 import Home from "./pages/Home"
 import Rooms from "./pages/Rooms"
 import Room from "./pages/Room"
@@ -14,22 +14,7 @@ function App() {
   return (
     <Router>
       <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/rooms">Rooms</Link>
-            </li>
-            <li>
-              <Link to="/room">Room</Link>
-            </li>
-            <li>
-              <Link to="/error">Error</Link>
-            </li>
-          </ul>
-        </nav>
+        <Navbar />
 
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
@@ -43,7 +28,7 @@ function App() {
           <Route exact path="/room">
             <Room />
           </Route>
-          <Route exact path="/error">
+          <Route >
             <Error/>
           </Route>
         </Switch>
