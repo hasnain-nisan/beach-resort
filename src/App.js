@@ -13,7 +13,7 @@ import Error from "./pages/Error"
 function App() {
   return (
     <Router>
-      <div>
+      <div className="h-screen w-screen antialiased bg-gradient-to-r from-pink-300 via-purple-300 to-indigo-400">
         <Navbar />
 
         {/* A <Switch> looks through its children <Route>s and
